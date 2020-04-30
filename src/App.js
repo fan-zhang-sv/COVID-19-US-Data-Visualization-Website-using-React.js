@@ -75,15 +75,7 @@ function App() {
       <Grid item xs={12} sm={7} md={8}>
         <ShowMap data={json} />
       </Grid>
-      <Grid
-        item
-        xs={false}
-        sm={5}
-        md={4}
-        component={Paper}
-        elevation={6}
-        square
-      >
+      <Grid item xs={12} sm={5} md={4} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <InfoBoard data={listJson} />
         </div>
