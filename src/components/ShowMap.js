@@ -51,7 +51,13 @@ export default class ShowMap extends Component {
               return {
                 lat: value.lat,
                 lng: value.lng,
-                weight: value.confirmed !== 0 ? Math.log(value.confirmed) : 0,
+                weight: [value.confirmed].map((v) => {
+                  if (v > 20000) {
+                    return 20000;
+                  } else {
+                    return v;
+                  }
+                })[0],
               };
             }),
             options: {
